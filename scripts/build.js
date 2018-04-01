@@ -71,17 +71,17 @@ recursive(paths.appBuild, (err, fileNames) => {
 
 // Replace build/manifest.json background script name with the hashed one
 function updateManifestJson(stats) {
-  const manifest = paths.appBuild + '/manifest.json';
+  // const manifest = paths.appBuild + '/manifest.json';
 
-  const background = stats.toJson().assets
-    .filter(asset => /background\..*\.js$/.test(asset.name))[0];
+  // const background = stats.toJson().assets
+  //   .filter(asset => /background\..*\.js$/.test(asset.name))[0];
 
-  let fileContents = fs.readFileSync(manifest, 'utf8');
+  // let fileContents = fs.readFileSync(manifest, 'utf8');
 
-  fs.writeFileSync(
-    manifest,
-    fileContents.replace(/"static\/.*background.*\.js"/, `"${background.name}"`)
-  );
+  // fs.writeFileSync(
+  //   manifest,
+  //   fileContents.replace(/"static\/.*background.*\.js"/, `"${background.name}"`)
+  // );
 }
 
 // Print a detailed summary of build files.

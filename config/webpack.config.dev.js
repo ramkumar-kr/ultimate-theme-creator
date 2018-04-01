@@ -73,15 +73,6 @@ module.exports = {
       // We include the app code last so that if there is a runtime error during
       // initialization, it doesn't blow up the WebpackDevServer client, and
       // changing JS code would still trigger a refresh.
-    ],
-    background: [
-      // We ship a few polyfills by default:
-      require.resolve('./polyfills'),
-      // Finally, this is your app's code:
-      paths.appBackgroundJs
-      // We include the app code last so that if there is a runtime error during
-      // initialization, it doesn't blow up the WebpackDevServer client, and
-      // changing JS code would still trigger a refresh.
     ]
   },
   output: {
@@ -217,14 +208,14 @@ module.exports = {
       inject: true,
       template: paths.appCreatorHtml,
       filename: 'creator.html',
-      excludeChunks: ['background', 'import'],
+      excludeChunks: ['import'],
     }),
 
     new HtmlWebpackPlugin({
       inject: true,
       template: paths.appImportHtml,
       filename: 'import.html',
-      excludeChunks: ['background', 'creator'],
+      excludeChunks: ['creator'],
     }),
     // Makes some environment variables available to the JS code, for example:
     // if (process.env.NODE_ENV === 'development') { ... }. See `./env.js`.

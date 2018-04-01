@@ -63,10 +63,6 @@ module.exports = {
       require.resolve('./polyfills'),
       paths.appImportJs
     ],
-    background: [
-      require.resolve('./polyfills'),
-      paths.appBackgroundJs
-    ],
   },
   output: {
     // The build folder.
@@ -97,7 +93,7 @@ module.exports = {
       'react-native': 'react-native-web'
     }
   },
-  
+
   module: {
     // First, run the linter.
     // It's important to do this before Babel processes the JS.
@@ -140,7 +136,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         include: paths.appSrc,
         loader: 'babel',
-        
+
       },
       // The notation here is somewhat confusing.
       // "postcss" loader applies autoprefixer to our CSS.
@@ -175,9 +171,9 @@ module.exports = {
       }
     ]
   },
-  
+
   // We use PostCSS for autoprefixing only.
-  postcss: function() {
+  postcss: function () {
     return [
       autoprefixer({
         browsers: [
@@ -202,7 +198,7 @@ module.exports = {
       inject: true,
       template: paths.appCreatorHtml,
       filename: 'creator.html',
-      excludeChunks: ['background', 'import'],
+      excludeChunks: ['import'],
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -217,25 +213,25 @@ module.exports = {
       }
     }),
 
-        // Generates an `import.html` file with the <script> injected.
-        new HtmlWebpackPlugin({
-          inject: true,
-          template: paths.appCreatorHtml,
-          filename: 'import.html',
-          excludeChunks: ['creator','background'],
-          minify: {
-            removeComments: true,
-            collapseWhitespace: true,
-            removeRedundantAttributes: true,
-            useShortDoctype: true,
-            removeEmptyAttributes: true,
-            removeStyleLinkTypeAttributes: true,
-            keepClosingSlash: true,
-            minifyJS: true,
-            minifyCSS: true,
-            minifyURLs: true
-          }
-        }),
+    // Generates an `import.html` file with the <script> injected.
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: paths.appCreatorHtml,
+      filename: 'import.html',
+      excludeChunks: ['creator'],
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true
+      }
+    }),
 
     // Makes some environment variables available to the JS code, for example:
     // if (process.env.NODE_ENV === 'production') { ... }. See `./env.js`.

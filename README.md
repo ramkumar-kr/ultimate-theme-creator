@@ -1,7 +1,6 @@
-
 # Ultimate theme creator
 
-Create your firefox theme and share it with others.
+Create your ultimate firefox theme and share it with others.
 
 ---
 
@@ -22,7 +21,7 @@ Create your firefox theme and share it with others.
 
 ## Building for production
 * Generate the `build/` directory
-* Run the command  `web-ext build -s ./build` to create a compressed zip file.
+* Run the command  `web-ext build -o -s ./build -i "static/js/*.js.map" "static/css/*.css.map" "asset-manifest.json"` to create a compressed zip file.
 * Submit the zip file to the firefox addons store.
 
 ## FAQ
@@ -81,4 +80,3 @@ This is currently a limitation of the API. More details [here](https://developer
 * Create a new folder with the name as the name of the theme
 * Please copy the code in the grey box (JSON) to a new file named manifest.json inside the theme folder
 * Compress the theme folder as a zip file and upload it [here](https://addons.mozilla.org/en-US/developers/addon/submit/distribution).
-

@@ -37,7 +37,6 @@ module.exports = {
   appCreatorJs: resolveApp('src/creator.js'),
   appImportHtml: resolveApp('public/import.html'),
   appImportJs: resolveApp('src/import.js'),
-  appBackgroundJs: resolveApp('src/background.js'),
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
   yarnLockFile: resolveApp('yarn.lock'),

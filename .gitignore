@@ -67,3 +67,5 @@ build/
 .vscode/
 
 dev-build/
+
+web-ext-artifacts/
