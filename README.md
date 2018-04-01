@@ -58,20 +58,23 @@ No. It is not supported right now.
 
 * Please share the code in the grey box (JSON) to the person whom you want to share your theme with
 
-**How can I import a theme shared to me?**
+**How can I apply a theme shared to me?**
 
 * Click on the icon in the toolbar
-* Select the ***Import a theme*** option
 * Enter the code (JSON) file shared in the textbox
-* Click on the import and apply button
+* Click on the apply button
 
-**Can I import multiple themes?**
+**Can I apply multiple themes?**
 
-No. you can import and apply only one theme.
+No. you can apply only one theme at a time.
 
 **When I click on try it button, why does my imported theme disappear?**
 
-This is one of the current drawbacks of this extension. It may be fixed in the future versions of this extension.
+This is one of the current drawbacks of this extension.
+
+**When I click reset to default theme, why does it reset to default theme of firefox?**
+
+This is currently a limitation of the API. More details [here](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/theme/reset).
 
 **How do I upload it to the addon store?**
 

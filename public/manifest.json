@@ -4,6 +4,8 @@
   "description": "__MSG_extensionDescription__",
   "browser_action": {
     "default_title": "Create your theme",
+    "default_popup": "import.html",
+    "browser_style": false,
     "theme_icons": [
       {
         "light": "icon-dark.svg",

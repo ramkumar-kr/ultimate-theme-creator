@@ -1,0 +1,12 @@
+.bordered{
+    border-bottom: 1px dotted gainsboro;
+}
+
+.gaps{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}

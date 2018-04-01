@@ -59,6 +59,10 @@ module.exports = {
       require.resolve('./polyfills'),
       paths.appCreatorJs
     ],
+    import: [
+      require.resolve('./polyfills'),
+      paths.appImportJs
+    ],
     background: [
       require.resolve('./polyfills'),
       paths.appBackgroundJs
@@ -198,7 +202,7 @@ module.exports = {
       inject: true,
       template: paths.appCreatorHtml,
       filename: 'creator.html',
-      excludeChunks: ['background'],
+      excludeChunks: ['background', 'import'],
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -212,6 +216,27 @@ module.exports = {
         minifyURLs: true
       }
     }),
+
+        // Generates an `import.html` file with the <script> injected.
+        new HtmlWebpackPlugin({
+          inject: true,
+          template: paths.appCreatorHtml,
+          filename: 'import.html',
+          excludeChunks: ['creator','background'],
+          minify: {
+            removeComments: true,
+            collapseWhitespace: true,
+            removeRedundantAttributes: true,
+            useShortDoctype: true,
+            removeEmptyAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            keepClosingSlash: true,
+            minifyJS: true,
+            minifyCSS: true,
+            minifyURLs: true
+          }
+        }),
+
     // Makes some environment variables available to the JS code, for example:
     // if (process.env.NODE_ENV === 'production') { ... }. See `./env.js`.
     // It is absolutely essential that NODE_ENV was set to production here.

@@ -54,6 +54,26 @@ module.exports = {
       // initialization, it doesn't blow up the WebpackDevServer client, and
       // changing JS code would still trigger a refresh.
     ],
+    import: [
+      // Include an alternative client for WebpackDevServer. A client's job is to
+      // connect to WebpackDevServer by a socket and get notified about changes.
+      // When you save a file, the client will either apply hot updates (in case
+      // of CSS changes), or refresh the page (in case of JS changes). When you
+      // make a syntax error, this client will display a syntax error overlay.
+      // Note: instead of the default WebpackDevServer client, we use a custom one
+      // to bring better experience for Create React App users. You can replace
+      // the line below with these two lines if you prefer the stock client:
+      // require.resolve('webpack-dev-server/client') + '?/',
+      // require.resolve('webpack/hot/dev-server'),
+      require.resolve('react-webextension-dev-utils/webpackHotDevClient'),
+      // We ship a few polyfills by default:
+      require.resolve('./polyfills'),
+      // Finally, this is your app's code:
+      paths.appImportJs
+      // We include the app code last so that if there is a runtime error during
+      // initialization, it doesn't blow up the WebpackDevServer client, and
+      // changing JS code would still trigger a refresh.
+    ],
     background: [
       // We ship a few polyfills by default:
       require.resolve('./polyfills'),
@@ -197,7 +217,14 @@ module.exports = {
       inject: true,
       template: paths.appCreatorHtml,
       filename: 'creator.html',
-      excludeChunks: ['background'],
+      excludeChunks: ['background', 'import'],
+    }),
+
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: paths.appImportHtml,
+      filename: 'import.html',
+      excludeChunks: ['background', 'creator'],
     }),
     // Makes some environment variables available to the JS code, for example:
     // if (process.env.NODE_ENV === 'development') { ... }. See `./env.js`.
