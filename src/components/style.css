@@ -1,0 +1,67 @@
+.CreatorApp{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.CreatorApp-body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.CreatorApp-header{
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: darkslateblue;
+    color: floralwhite;
+}
+
+.grid-item{
+    padding: 20px;
+    border-top: 1px dotted gainsboro;   
+}
+
+
+label.grid-item{
+    text-align: end;
+}
+
+div.grid-item:first-of-type{
+    border-top: none;
+}
+
+label.grid-item:first-of-type{
+    border-top: none;
+}
+
+.grid-item-full-width{
+    grid-column: span 2;
+    text-align: center;
+    padding: 30px;
+}
+
+.CreatorApp-actions{
+    padding-top: 5%;
+    text-align: center;
+}
+
+button {
+    min-height: 64px;
+    width: 90%;
+    font-size: larger;
+}
+
+p.center{
+    text-align: center;
+    font-style: oblique;
+    font-size: small;
+}
+
+pre{
+    margin-top: 40px;
+    padding: 10px;
+    background-color: lightgray;
+    vertical-align: middle;
+    display: grid;
+}

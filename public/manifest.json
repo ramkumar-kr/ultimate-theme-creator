@@ -1,0 +1,28 @@
+{
+  "name": "__MSG_extensionName__",
+  "version": "0.1",
+  "description": "__MSG_extensionDescription__",
+  "browser_action": {
+    "default_title": "Create your theme",
+    "theme_icons": [
+      {
+        "light": "icon-dark.svg",
+        "dark": "icon-light.svg",
+        "size": 64
+      }
+    ]
+  },
+  "background": {
+    "scripts": ["static/js/background.bundle.js"]
+  },
+  "permissions": [
+    "tabs",
+    "theme"
+  ],
+  "icons": {
+    "48": "icon.svg"
+  },
+  "default_locale": "en",
+
+  "manifest_version": 2
+}

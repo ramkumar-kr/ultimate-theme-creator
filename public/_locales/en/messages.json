@@ -1,0 +1,95 @@
+{
+    "tab_selected": {
+        "message": "Background color of active tab"
+    },
+    "toolbar": {
+        "message": "Background color of the toolbar"
+    },
+    "tab_text": {
+        "message": "Color of text in active tab and toolbar"
+    },
+    "accentcolor": {
+        "message": "Background color of inactive tabs"
+    },
+    "textcolor": {
+        "message": "Text color of inactive tabs"
+    },
+    "button_background_active": {
+        "message": "Background color of the toolbar button when pressed"
+    },
+    "button_background_hover": {
+        "message": "Background color of the toolbar button when hovered"
+    },
+    "icons": {
+        "message": "Color of toolbar icons"
+    },
+    "icons_attention": {
+        "message": "Color of toolbar icons in attention state (Example - Starred bookmark, finished download etc.,)"
+    },
+    "popup": {
+        "message": "Background color of popups (such as the url bar dropdown and the arrow panels)."
+    },
+    "popup_border": {
+        "message": "Border color of popups"
+    },
+    "popup_highlight": {
+        "message": "Background color of selected item highlighted using the keyboard in popups (Example - selected item in URL bar)"
+    },
+    "popup_highlight_text": {
+        "message": "Text color of items highlighted using keyboard inside popups"
+    },
+    "popup_text": {
+        "message": "Text color of popups"
+    },
+    "tab_line": {
+        "message": "Color of active tab line"
+    },
+    "tab_loading": {
+        "message": "Color of the tab loading indicator and the tab loading burst."
+    },
+    "toolbar_bottom_separator": {
+        "message": "Border color separating browser UI from the webpage"
+    },
+    "toolbar_field": {
+        "message": "Background color for fields in the toolbar, such as the URL bar"
+    },
+    "toolbar_field_border": {
+        "message": "Border color for fields in the toolbar"
+    },
+    "toolbar_field_border_focus": {
+        "message": "Focused border color for fields in the toolbar"
+    },
+    "toolbar_field_focus": {
+        "message": "Focused background color for fields in the toolbar"
+    },
+    "toolbar_field_text": {
+        "message": "Color of text in fields in the toolbar"
+    },
+    "toolbar_field_text_focus": {
+        "message": "Color of text in focused fields in the toolbar"
+    },
+    "toolbar_field_separator": {
+        "message": "Color of seperators in toolbar and URL bar"
+    },
+    "toolbar_text": {
+        "message": "Color of text in the toolbar"
+    },
+    "toolbar_top_separator": {
+        "message": "Border color between toolbar and inactive tabs"
+    },
+    "toolbar_vertical_separator": {
+    "message": "Color of the separator next to the application menu icon"
+    },
+    "extensionName": {
+        "message": "Ultimate Theme creator"
+    },
+    "extensionDescription": {
+        "message": "Create your own static theme"
+    },
+    "fillMessage": {
+        "message": "Please select the appropriate colors for the various options provided. Items marked with * are compulsory"
+    },
+    "namePrompt": {
+        "message": "Name of the theme"
+    }
+}
