@@ -19,19 +19,20 @@ class CreatorApp extends Component {
     super(props);
     this.applyTheme = this.applyTheme.bind(this);
     this.autoApply = this.autoApply.bind(this);
-    this.state = store.getState();
-    this.unsubscribe = null;
+    this.state = { unsubscribe: null };
   }
 
   autoApply(event) {
     if (event.target.checked) {
-      this.unsubscribe = store.subscribe(() => {
-        browser.theme.update(store.getState().theme);
+      this.setState({
+        unsubscribe: store.subscribe(() => {
+          browser.theme.update(store.getState().theme);
+        })
       });
-  
+
     } else {
-      this.unsubscribe();
-      this.unsubscribe = null;
+      this.state.unsubscribe();
+      this.setState({ unsubscribe: null });
     }
   }
 
