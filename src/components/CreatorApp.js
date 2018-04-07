@@ -6,9 +6,6 @@ import './style.css';
 import ManifestView from './ManifestView';
 import ColorInput from './ColorInput';
 
-
-
-
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onTitleChanged: (event) => {
@@ -21,7 +18,21 @@ class CreatorApp extends Component {
   constructor(props) {
     super(props);
     this.applyTheme = this.applyTheme.bind(this);
+    this.autoApply = this.autoApply.bind(this);
     this.state = store.getState();
+    this.unsubscribe = null;
+  }
+
+  autoApply(event) {
+    if (event.target.checked) {
+      this.unsubscribe = store.subscribe(() => {
+        browser.theme.update(store.getState().theme);
+      });
+  
+    } else {
+      this.unsubscribe();
+      this.unsubscribe = null;
+    }
   }
 
   applyTheme() {
@@ -72,7 +83,8 @@ class CreatorApp extends Component {
         </div>
 
         <div className="CreatorApp-actions">
-          <div><button id="try" onClick={this.applyTheme} >Try it!</button></div>
+          <div><label> <input type="checkbox" onClick={this.autoApply} />{browser.i18n.getMessage("autoApply")}</label> </div>
+          <div><button id="try" onClick={this.applyTheme} >{browser.i18n.getMessage("tryIt")}</button></div>
         </div>
 
         <ManifestView />

@@ -91,5 +91,11 @@
     },
     "namePrompt": {
         "message": "Name of the theme"
+    },
+    "autoApply": {
+        "message": "Automatically apply colour changes"
+    },
+    "tryIt": {
+        "message": "Try it!"
     }
 }
