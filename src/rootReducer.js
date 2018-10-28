@@ -44,10 +44,17 @@ const version = (state = "1.0", action) => {
     }
 }
 
+const description = (state = "This theme was created using Ultimate theme creator", action) => {
+    switch (action.type) {
+        default:
+            return state
+    }
+}
 
 export default combineReducers({
     theme,
     name,
     manifest_version,
-    version
+    version,
+    description
 });

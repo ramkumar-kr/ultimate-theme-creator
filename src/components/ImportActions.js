@@ -13,15 +13,24 @@ class ImportActions extends Component {
         browser.tabs.create({ url: browser.extension.getURL("/creator.html"), active: true });
         window.close();
     }
+
+    FAQ() {
+        browser.tabs.create({ url: "https://github.com/ramkumar-kr/ultimate-theme-creator#faq", active: true })
+    }
+
     render() {
         return (
             <div className="action-grid" >
                 <button onClick={this.OpenPage} id="openPage">
-                    Create your own theme
+                {browser.i18n.getMessage("openPage")}
                 </button>
 
                 <button onClick={this.ResetTheme} id="reset">
-                    Reset to default theme
+                {browser.i18n.getMessage("resetDefault")}
+                </button>
+
+                <button onClick={this.FAQ} id="faq">
+                    {browser.i18n.getMessage("faqButton")}
                 </button>
             </div>
         )

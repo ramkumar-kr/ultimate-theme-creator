@@ -55,15 +55,18 @@ No. It is not supported right now.
 
 **How do I share my theme with others?**
 
-* Please share the code in the grey box (JSON) to the person whom you want to share your theme with
+There are multiple ways to share your theme.
 
-**How can I apply a theme shared to me?**
+1. Please share the code in the grey box (JSON) to the person whom you want to share your theme with and use the text box in toolbar popup
+2. **Recommended** Download the theme and share it by uploading it to mozilla's addon store
+
+**How can I apply a theme shared to me (JSON)?**
 
 * Click on the icon in the toolbar
 * Enter the code (JSON) file shared in the textbox
 * Click on the apply button
 
-**Can I apply multiple themes?**
+**Can I apply multiple themes (JSON)?**
 
 No. you can apply only one theme at a time.
 
@@ -77,6 +80,9 @@ This is currently a limitation of the API. More details [here](https://developer
 
 **How do I upload it to the addon store?**
 
-* Create a new folder with the name as the name of the theme
-* Please copy the code in the grey box (JSON) to a new file named manifest.json inside the theme folder
-* Compress the theme folder as a zip file and upload it [here](https://addons.mozilla.org/en-US/developers/addon/submit/distribution).
+* Click the download button and save the zip file.
+* Upload it [here](https://addons.mozilla.org/en-US/developers/addon/submit/distribution).
+
+**There is a new option available with the theme API but this addon does not have it. When can I get it?**
+
+Please create a issue or a pull request for it on github.

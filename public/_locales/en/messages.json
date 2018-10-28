@@ -97,5 +97,45 @@
     },
     "tryIt": {
         "message": "Try it!"
+    },
+    "downloadFailed": {
+        "message": "Generating the zip file failed"
+    },
+    "downIt": {
+        "message": "Download as zip"
+    },
+    "faqButton": {
+        "message": "View Frequently asked questions"
+    },
+    "openPage": {
+        "message": "Create your own theme"
+    },
+    "resetDefault": {
+        "message": "Reset to default theme"
+    },
+    "ntp_background": {
+        "message": "Background color of default new tab page"
+    },
+    "ntp_text": {
+        "message": "Text color of default new tab page"
+    },
+    "sidebar": {
+        "message": "Background color of built in sidebars"
+    },
+    "sidebar_border": {
+        "message": "Border color of built in sidebars"
+    },
+    "sidebar_highlight": {
+        "message": "Background color of selected option in built in sidebars"
+    },
+    "sidebar_highlight_text": {
+        "message": "Text color of selected option in built in sidebars"
+    },
+    "sidebar_text": {
+        "message": "Text color of built in sidebars"
+    },
+    "tab_background_separator": {
+        "message": "Color of seperators between tabs in background"
     }
+
 }

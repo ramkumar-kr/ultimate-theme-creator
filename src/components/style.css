@@ -36,7 +36,7 @@ label.grid-item:first-of-type{
 }
 
 .grid-item-full-width{
-    grid-column: span 2;
+    grid-column: span 3;
     text-align: center;
     padding: 30px;
 }
@@ -44,7 +44,7 @@ label.grid-item:first-of-type{
 .CreatorApp-actions{
     padding-top: 5%;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
     text-align: center;
 }
 
@@ -52,6 +52,30 @@ button {
     min-height: 64px;
     width: 90%;
     font-size: larger;
+}
+
+.primaryAction {
+    background-color: #0060df;
+    border-radius: 2px;
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    min-width: 132px;
+    border: none;
+    height: 32px;
+    text-align: center;
+}
+
+.secondaryAction {
+    color: #0c0c0d;
+    background-color: rgba(12, 12, 13, 0.1);
+    border-radius: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    min-width: 132px;
+    border: none;
+    height: 32px;
+    text-align: center;
 }
 
 p.center{
