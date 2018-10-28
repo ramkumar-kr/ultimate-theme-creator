@@ -10,10 +10,10 @@ Create your ultimate firefox theme and share it with others.
 
 ## Steps to generate the build directory
 
-* Install `yarn` and `web-ext` (one-time only)
+* Install `npm` and `web-ext` (one-time only)
 * Clone the repository (one-time only)
-* Run `yarn install` in the root of the repository
-* Run `yarn run build` which generates a `build/` directory
+* Run `npm install` in the root of the repository
+* Run `npm run build` which generates a `build/` directory
 
 ## Testing the extension
 * Generate the `build/` directory after making the changes
