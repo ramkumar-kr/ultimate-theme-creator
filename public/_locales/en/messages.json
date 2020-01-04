@@ -8,10 +8,13 @@
     "tab_text": {
         "message": "Color of text in active tab and toolbar"
     },
-    "accentcolor": {
-        "message": "Background color of inactive tabs"
+    "frame": {
+        "message": "Background color of header"
     },
-    "textcolor": {
+    "frame_inactive": {
+        "message": "Background color of header for inactive window"
+    },
+    "tab_background_text": {
         "message": "Text color of inactive tabs"
     },
     "button_background_active": {
@@ -136,6 +139,13 @@
     },
     "tab_background_separator": {
         "message": "Color of seperators between tabs in background"
+    },
+    "toolbar_field_highlight": {
+        "message": "Background color of selected text in the toolbar and search bar"
+    },
+    "toolbar_field_highlight_text": {
+        "message": "Color of selected text in the toolbar and search bar"
     }
+    
 
 }

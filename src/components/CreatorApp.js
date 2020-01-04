@@ -70,8 +70,9 @@ class CreatorApp extends Component {
           <ColorInput id="toolbar" />
           <ColorInput id="tab_text" />
 
-          <ColorInput id="accentcolor" mandatory={true} />
-          <ColorInput id="textcolor" mandatory={true} />
+          <ColorInput id="frame" mandatory={true} />
+          <ColorInput id="tab_background_text" mandatory={true} />
+          <ColorInput id="frame_inactive" />
           <ColorInput id="ntp_background" />
           <ColorInput id="ntp_text" />
           <ColorInput id="sidebar" />
@@ -98,6 +99,8 @@ class CreatorApp extends Component {
           <ColorInput id="toolbar_field_focus" />
           <ColorInput id="toolbar_field_text" />
           <ColorInput id="toolbar_field_text_focus" />
+          <ColorInput id="toolbar_field_highlight" />
+          <ColorInput id="toolbar_field_highlight_text" />
           <ColorInput id="toolbar_field_separator" />
           <ColorInput id="toolbar_text" />
           <ColorInput id="toolbar_top_separator" />
